@@ -4,6 +4,8 @@ services:
         build:
             context: ./
             dockerfile: Dockerfile
+        links:
+            - node-ssr
         ports:
             - 8000:8000
         volumes:
@@ -16,3 +18,11 @@ services:
             - 8001:8001
         volumes:
             -   .:/app
+
+    node-ssr:
+        build:
+            context: ./
+            dockerfile: DockerfileNode
+        volumes:
+            - .:/app
+        command: bash ./bin/ssr.sh

@@ -1,0 +1,12 @@
+{
+  "entrypoints": {
+    "ssr": {
+      "css": [
+        "/build-ssr/ssr.css"
+      ],
+      "js": [
+        "/build-ssr/ssr.js"
+      ]
+    }
+  }
+}

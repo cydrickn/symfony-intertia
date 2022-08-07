@@ -4,7 +4,8 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-
+    env(APP_INERTIA_SSR_ENABLE): 'true'
+    env(APP_INERTIA_SSR_URL): 'http://node-ssr:13714/render'
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -19,12 +20,26 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+            - '../src/Twig'
 
     App\Controller\:
         resource: '../src/Controller/'
         arguments:
             $inertia: '@rompetomp_inertia.inertia'
         tags: [ 'controller.service_arguments' ]
+
+    App\Ssr\HttpGateway:
+        arguments:
+            $url: '%env(string:APP_INERTIA_SSR_URL)%'
+    App\Ssr\GatewayInterface: '@App\Ssr\HttpGateway'
+
+    rompetomp_inertia.twig_extension:
+        class: App\Twig\InertiaExtension
+        public: false
+        arguments:
+            $isSsr: '%env(bool:APP_INERTIA_SSR_ENABLE)%'
+        tags:
+            - { name: twig.extension }
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
