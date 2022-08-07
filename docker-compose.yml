@@ -1,0 +1,18 @@
+version: '3'
+services:
+    php:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/app
+    node:
+        build:
+            context: ./
+            dockerfile: DockerfileNode
+        ports:
+            - 8001:8001
+        volumes:
+            -   .:/app
