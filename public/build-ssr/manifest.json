@@ -1,6 +1,0 @@
-{
-  "build-ssr/ssr.css": "/build-ssr/ssr.css",
-  "build-ssr/ssr.js": "/build-ssr/ssr.js",
-  "build-ssr/assets_pages_welcome_vue.css": "/build-ssr/assets_pages_welcome_vue.css",
-  "build-ssr/assets_pages_welcome_vue.js": "/build-ssr/assets_pages_welcome_vue.js"
-}

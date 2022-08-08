@@ -564,22 +564,24 @@
         },
         {
             "name": "rompetomp/inertia-bundle",
-            "version": "v2.2.2",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rompetomp/inertia-bundle.git",
-                "reference": "a1bb91f97899a1edc68281828734963d1bf08e0a"
+                "reference": "ecae4087c90048a09f313d92d4b20f6b4c73c6f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rompetomp/inertia-bundle/zipball/a1bb91f97899a1edc68281828734963d1bf08e0a",
-                "reference": "a1bb91f97899a1edc68281828734963d1bf08e0a",
+                "url": "https://api.github.com/repos/rompetomp/inertia-bundle/zipball/ecae4087c90048a09f313d92d4b20f6b4c73c6f1",
+                "reference": "ecae4087c90048a09f313d92d4b20f6b4c73c6f1",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "php": "^7.3|^8",
                 "symfony/config": "^4.4|^5.1.7|^6.0",
                 "symfony/dependency-injection": "^4.4|^5.1.7|^6.0",
+                "symfony/http-client": "^4.4|^5.1.7|^6.1",
                 "symfony/http-kernel": "^4.4|^5.1.7|^6.0",
                 "twig/twig": "^2.12|^3.0"
             },
@@ -609,9 +611,9 @@
             "description": "A Symfony adapter for Inertia.js",
             "support": {
                 "issues": "https://github.com/rompetomp/inertia-bundle/issues",
-                "source": "https://github.com/rompetomp/inertia-bundle/tree/v2.2.2"
+                "source": "https://github.com/rompetomp/inertia-bundle/tree/v2.3.0"
             },
-            "time": "2022-08-03T08:24:43+00:00"
+            "time": "2022-08-08T08:31:07+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1700,16 +1702,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v2.2.2",
+            "version": "v2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "78510b1be591433513c8087deec24e9fd90d110d"
+                "reference": "0763da1bdcce1d48c06778d48249905c26d34a72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/78510b1be591433513c8087deec24e9fd90d110d",
-                "reference": "78510b1be591433513c8087deec24e9fd90d110d",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/0763da1bdcce1d48c06778d48249905c26d34a72",
+                "reference": "0763da1bdcce1d48c06778d48249905c26d34a72",
                 "shasum": ""
             },
             "require": {
@@ -1745,7 +1747,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v2.2.2"
+                "source": "https://github.com/symfony/flex/tree/v2.2.3"
             },
             "funding": [
                 {
@@ -1761,7 +1763,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-15T06:51:57+00:00"
+            "time": "2022-08-07T09:39:47+00:00"
         },
         {
             "name": "symfony/framework-bundle",

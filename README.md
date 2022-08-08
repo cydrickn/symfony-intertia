@@ -67,10 +67,6 @@ The pages directory is located in `assets/`
 
 ## SSR
 
-Currently, [Symfony Inertia Bundle](https://github.com/rompetomp/inertia-bundle) does not support SSR.
-
-But in this template we added a service that will support ssr and by default this template enable it.
-
 To change this configuration just change your .env files variables
 
 | env                    | description     | type    | default                      |
@@ -103,7 +99,7 @@ This issue is cause that the nodemon is still recompiling the code. So in few se
 ## TODO
 
 - [ ] Fix the issue in ssr reloading for dev environment
-- [ ] Create a merge request [Symfony Inertia Bundle](https://github.com/rompetomp/inertia-bundle)
+- [x] Create a merge request [Symfony Inertia Bundle](https://github.com/rompetomp/inertia-bundle)
   for ssr support this is to remove the service in this template
 
 ## References
