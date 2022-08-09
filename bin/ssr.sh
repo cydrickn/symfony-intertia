@@ -1,1 +1,3 @@
-nodemon --exec "npm run build-ssr && npm run dev-ssr-server"
+npm run build:dev:ssr -- --watch &
+
+npm run dev:ssr

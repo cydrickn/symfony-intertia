@@ -78,30 +78,6 @@ The default for the url is the container of docker setup.
 
 This ssr configuration is following the ssr support of Inertia https://inertiajs.com/server-side-rendering
 
-### Current Problem For Dev Environment
-
-We really make what exactly in the document of inertia, but for some reason the document 
-don't have hot reloading of file, for example when user change a page the ssr will not refresh this file
-this is due to the `require('page/${name}')` in `ssr.js`, where webpack will compile this with cache
-and because of that, it will not get the current file. So far this is just fine for production but for development
-environment its a bit annoying that you need to stop + build + start the ssr.
-
-We make a temporary reloading for this by using `nodemon` package of npm, you can check it in the file
-[bin/ssr.sh](./bin/ssr.sh), this shell script will be also called in node-ssr container.
-
-While doing a test, this will cause a problem where it's not seamless reloading. If you have large/many files in your assets
-the reloading will also take long. And you immediately access the site, there is a tendency you will receive an issue
-`An exception has been thrown during the rendering of a template ("Failed to connect to node-ssr port 13714: Connection refused for "http://node-ssr:13714/render".").`
-This issue is cause that the nodemon is still recompiling the code. So in few seconds that error should be gone.
-
-![Symfony Inertia and Vue SSR dev environment issue](./public/images/symfony-issue-ssr.png)
-
-## TODO
-
-- [ ] Fix the issue in ssr reloading for dev environment
-- [x] Create a merge request [Symfony Inertia Bundle](https://github.com/rompetomp/inertia-bundle)
-  for ssr support this is to remove the service in this template
-
 ## References
 
 - [Symfony](https://symfony.com/)

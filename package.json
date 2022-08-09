@@ -13,18 +13,19 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "dev-ssr-server": "node ./public/build-ssr/ssr.js",
-        "dev-server": "encore dev-server",
-        "dev": "encore dev",
-        "watch": "encore dev --watch",
+        "dev:ssr": "ts-node-dev ./public/build-ssr/ssr.js",
+        "dev": "encore dev-server",
+        "build:dev": "encore dev",
+        "build:dev:ssr": "encore dev -c ./webpack.ssr.config.js",
         "build": "encore production --progress",
-        "build-ssr": "encore dev -c ./webpack.ssr.config.js"
+        "build:ssr": "encore production -c ./webpack.ssr.config.js"
     },
     "dependencies": {
         "@inertiajs/inertia": "^0.11.0",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/server": "^0.1.0",
         "@vue/server-renderer": "^3.2.37",
+        "ts-node-dev": "^2.0.0",
         "vue": "^3.2.37",
         "vue-loader": "^17.0.0",
         "webpack-node-externals": "^3.0.0"

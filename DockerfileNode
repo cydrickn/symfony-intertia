@@ -1,7 +1,5 @@
 FROM node:latest
 
-RUN npm install -g nodemon
-
 RUN mkdir /app
 WORKDIR /app
 
@@ -9,4 +7,4 @@ COPY .docker/node-entrypoint.sh /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
 
 ENTRYPOINT ["docker-entrypoint"]
-CMD npm run dev-server -- --port=8001 --host=0.0.0.0
+CMD npm run dev -- --port=8001 --host=0.0.0.0
